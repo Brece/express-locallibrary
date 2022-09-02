@@ -6,7 +6,7 @@ Install dependencies with:
     > npm install
 
 run the app (Bash (Linux or macOS))
-    > DEBUG=express-localLibrary-tutorial:* npm start
+    > npm run serverstart
 
 run the app (PowerShell (Windows))
     > $ENV:DEBUG = "express-localLibrary-tutorial:*"; npm start
