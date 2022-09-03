@@ -10,7 +10,10 @@ const usersRouter = require('./routes/users');
 // Import routes for "catalog" area of site
 const catalogRouter = require('./routes/catalog');
 
+// Import packages for deployment
 const compression = require('compression');
+const helmet = require('helmet');
+
 
 // database -------------------------------------
 //Import the mongoose module
@@ -41,6 +44,8 @@ app.use(cookieParser());
 
 // Compress all routes
 app.use(compression());
+// Set appropriate HTTP headers that help protect your app from well-known web vulnerabilities
+app.use(helmet());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
