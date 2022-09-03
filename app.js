@@ -6,7 +6,11 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+
+// Import routes for "catalog" area of site
 const catalogRouter = require('./routes/catalog');
+
+const compression = require('compression');
 
 // database -------------------------------------
 //Import the mongoose module
@@ -34,8 +38,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// Compress all routes
+app.use(compression());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Add routes to the middleware chain
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);
