@@ -20,7 +20,7 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 
 //Set up mongoose connection 
-const dev_db_url = 'mongodb+srv://brece:LLibrary0@cluster0.ayay7nr.mongodb.net/local_library?retryWrites=true&w=majority';
+const dev_db_url = 'mongodb+srv://user:user123@cluster0.ayay7nr.mongodb.net/local_library?retryWrites=true&w=majority';
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
