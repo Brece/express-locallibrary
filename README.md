@@ -1,8 +1,6 @@
 This is a small LocalLibrary project to learn Express/NodeJS in combination with Atlas MongoDB/Mongoose as database management and MVC (Model-View-Controller) concept. 
 It was part of an assignment of TheOdinProject: https://www.theodinproject.com/paths/full-stack-javascript/courses/nodejs
 
-LIVE version: https://hidden-brushlands-71466.herokuapp.com/catalog
-
 
 Install dependencies with:
     > npm install
